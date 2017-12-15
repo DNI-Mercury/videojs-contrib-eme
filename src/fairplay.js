@@ -72,7 +72,7 @@ const addKey = ({video, contentId, initData, cert, options, getLicense}) => {
         }
 
         keySession.update(new Uint8Array(license));
-      });
+      }, keySession);
     });
 
     keySession.addEventListener('webkitkeyadded', (event) => {
