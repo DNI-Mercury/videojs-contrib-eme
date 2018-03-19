@@ -31,7 +31,14 @@
     "watch": "npm run mkdirs && npm-run-all -p watch:*",
     "watch:js": "watchify src/plugin.js -t babelify -v -o dist/videojs-contrib-eme.js",
     "watch:test": "watchify `find test -name '*.test.js'` -t babelify -o dist-test/videojs-contrib-eme.js",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "bump-major": "./node_modules/npmversion/bin/npmversion --increment major",
+    "bump-minor": "./node_modules/npmversion/bin/npmversion --increment minor",
+    "bump-patch": "./node_modules/npmversion/bin/npmversion --increment patch",
+    "bump-major-alpha": "./node_modules/npmversion/bin/npmversion --increment premajor --preid alpha",
+    "bump-minor-alpha": "./node_modules/npmversion/bin/npmversion --increment preminor --preid alpha",
+    "bump-patch-alpha": "./node_modules/npmversion/bin/npmversion --increment prepatch --preid alpha",
+    "bump-prerelease": "./node_modules/npmversion/bin/npmversion --increment prerelease --preid alpha"
   },
   "keywords": [
     "videojs",
@@ -94,6 +101,7 @@
     "lodash-compat": "^3.10.0",
     "minimist": "^1.2.0",
     "npm-run-all": "~1.2.0",
+    "npmversion": "^1.6.2",
     "portscanner": "^1.0.0",
     "qunitjs": "^1.0.0",
     "serve-static": "^1.10.0",
