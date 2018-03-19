@@ -1,5 +1,5 @@
 {
-  "name": "videojs-contrib-eme",
+  "name": "@discovery-dni/videojs-contrib-eme",
   "version": "3.0.0",
   "description": "Supports Encrypted Media Extensions for playback of encrypted content in Video.js",
   "main": "es5/plugin.js",
